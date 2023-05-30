@@ -14,8 +14,8 @@ interface TodoItemsDAO {
     suspend fun insertItem(item: TodoItem)
 
     @Update
-    suspend fun softDelete(item: TodoItem)
+    suspend fun updateItem(item: TodoItem)
 
     @Query("SELECT * from todo_items where isActive = 1")
-    suspend fun getAllItems(): List<TodoItem>
+    fun getAllItems(): List<TodoItem>
 }

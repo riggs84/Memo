@@ -22,7 +22,7 @@ abstract class ToDoItemDatabase : RoomDatabase() {
         @Volatile
         private var instance: ToDoItemDatabase? = null
 
-        // it will be execute every time we crete ToDoItemDatabase()
+        // it will be executed every time we crete ToDoItemDatabase()
         operator fun invoke(context: Context): ToDoItemDatabase {
             return instance ?: synchronized(LOCK) {
                 createDataBase(context).also { instance = it }

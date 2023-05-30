@@ -7,15 +7,15 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "todo_items")
 data class TodoItem(
     @ColumnInfo(name = "description")
-    private var description: String,
+    var description: String?,
     @ColumnInfo(name = "isCompleted")
-    private var isCompleted: Int,
+    var isCompleted: Int = 0,
     @ColumnInfo(name = "isActive")
-    private var isActive: Int,
+    var isActive: Int = 1,
     @ColumnInfo(name = "title")
-    private var title: String,
+    var title: String,
     @ColumnInfo(name = "location")
-    private var location: String?
+    var location: String?
 ) {
     @PrimaryKey(autoGenerate = true)
     private var id: Int?= null
