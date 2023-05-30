@@ -18,5 +18,5 @@ data class TodoItem(
     var location: String?
 ) {
     @PrimaryKey(autoGenerate = true)
-    private var id: Int?= null
+    var id: Int?= null
 }
